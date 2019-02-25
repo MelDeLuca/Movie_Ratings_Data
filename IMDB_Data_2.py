@@ -44,7 +44,9 @@ print()
 leastmae=979
 bestmln = 950 
 
-for max_leaf_nodes in range(50, 979, 50):
+# Changed max leaf nodes range
+
+for max_leaf_nodes in range(2, 979, 2):
     mae = getthemae(max_leaf_nodes, train_X, val_X, train_y, val_y)
     print("Max Leaf Nodes: ", max_leaf_nodes, " Mean Absolute Error: ", mae)
     if mae < leastmae:
