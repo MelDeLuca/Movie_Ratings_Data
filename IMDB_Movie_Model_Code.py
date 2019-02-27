@@ -143,3 +143,10 @@ rf_val_predictions = rf_movie_model.predict(val_X)
 print("The Random Forest MAE is: ", mean_absolute_error(val_y, rf_val_predictions))
 
 #So using better parameters for DT is better than a straight-out RF
+
+# Now RF accuracy:
+
+errors = abs(val_y-rf_val_predictions)
+mape = 100*errors/val_y
+rf_accuracy = 100-np.mean(mape)
+print(round(rf_accuracy,2), "% is the accuracy.")
