@@ -116,7 +116,6 @@ def getthemae(max_leaf_nodes, train_X, val_X, train_y, val_y):
     themae = mean_absolute_error(val_y, prediction_val)
     return themae
 
-print()
 leastmae=979
 bestmln = 979 
 
@@ -134,6 +133,12 @@ val_dt_preds = dt_movie_model.predict(val_X)
 print("The better MAE for Decision Tree is now: ", mean_absolute_error(val_y, val_dt_preds))
 
 # Much better!
+
+errors = abs(val_y-val_dt_preds)
+mape = 100*errors/val_y
+dt_accuracy = 100 - np.mean(mape)
+print(round(dt_accuracy, 2), "% is the accuracy.")
+print()
 
 # How about RandomForest?
 
