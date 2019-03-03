@@ -20,7 +20,7 @@ print(movie_data.info(), movie_data.describe(), movie_data.head())
 # Might need to remove outliers 
 
 # Keep star_rating, content_rating, duration; omit title, genre, and actors_list
-# Am not going to use tile or actor names in the model; tried to use genre,
+# Am not going to use title or actor names in the model; tried to use genre,
 # but with so many smaller sub-genres, it wasn't easy to group them together
 # Does horror go with mystery or sci-fiction? Putting them all together isn't
 # much better, as mystery and sci-fiction are fairly different
